@@ -27,11 +27,11 @@ The cache persists across server restarts. Responses are stored in `cache.json` 
 ### Start the server
 
 ```bash
-go run main.go --port <number> --origin <url>
+./Caching-Proxy --port <number> --origin <url>
 ```
 
 ```bash
-go run main.go --port 3000 --origin https://dummyjson.com
+./Caching-Proxy --port 3000 --origin https://dummyjson.com
 ```
 
 The server will start on the specified port and forward all incoming requests to the origin.
@@ -52,7 +52,7 @@ X-Cache: HIT    # served from cache
 ### Clear the cache
 
 ```bash
-go run main.go --clear-cache
+./Caching-Proxy --clear-cache
 ```
 
 Deletes `cache.json`. The server does not need to be running.
